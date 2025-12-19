@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class TimeOfDay implements Comparable<TimeOfDay> {
     private int hours;
+	
     private int minutes;
 
     public TimeOfDay(int hours, int minutes) {

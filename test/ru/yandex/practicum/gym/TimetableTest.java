@@ -10,7 +10,6 @@ public class TimetableTest {
     @Test
     void testGetTrainingSessionsForDaySingleSession() {
         Timetable timetable = new Timetable();
-
         Group group = new Group("Акробатика для детей", Age.CHILD, 60);
         Coach coach = new Coach("Васильев", "Николай", "Сергеевич");
         TrainingSession singleTrainingSession = new TrainingSession(group, coach,

@@ -4,8 +4,7 @@ import java.util.Objects;
 
 public class Coach {
     private String surname;
-	
-    private String name;
+	private String name;
     private String middleName;
 
     public Coach(String surname, String name, String middleName) {

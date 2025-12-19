@@ -7,8 +7,7 @@ public class Timetable {
 
     public Timetable() {
         this.timetable = new EnumMap<>(DayOfWeek.class);
-		
-        for (DayOfWeek day : DayOfWeek.values()) {
+		for (DayOfWeek day : DayOfWeek.values()) {
             timetable.put(day, new TreeMap<>());
         }
     }

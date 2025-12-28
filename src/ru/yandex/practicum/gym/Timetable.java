@@ -7,7 +7,7 @@ public class Timetable {
 
     public Timetable() {
         this.timetable = new EnumMap<>(DayOfWeek.class);
-		for (DayOfWeek day : DayOfWeek.values()) {
+        for (DayOfWeek day : DayOfWeek.values()) {
             timetable.put(day, new TreeMap<>());
         }
     }
@@ -54,36 +54,14 @@ public class Timetable {
                 }
             }
         }
+        
         List<CoachTrainingsCount> result = new ArrayList<>();
         for (Map.Entry<Coach, Integer> entry : coachCountMap.entrySet()) {
             result.add(new CoachTrainingsCount(entry.getKey(), entry.getValue()));
         }
 
-        result.sort((c1, c2) -> Integer.compare(c2.getCount(), c1.getCount()));
+        Collections.sort(result); // Используем Comparable сортировку
 
         return result;
-    }
-
-    public static class CoachTrainingsCount {
-        private final Coach coach;
-        private final int count;
-
-        public CoachTrainingsCount(Coach coach, int count) {
-            this.coach = coach;
-            this.count = count;
-        }
-
-        public Coach getCoach() {
-            return coach;
-        }
-
-        public int getCount() {
-            return count;
-        }
-
-        @Override
-        public String toString() {
-            return coach + ": " + count + " тренировок";
-        }
     }
 }

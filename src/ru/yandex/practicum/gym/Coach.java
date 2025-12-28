@@ -27,6 +27,7 @@ public class Coach {
     public int hashCode() {
         return Objects.hash(surname, name, middleName);
     }
+
     public String getSurname() {
         return surname;
     }

@@ -54,7 +54,6 @@ public class Timetable {
                 }
             }
         }
-        
         List<CoachTrainingsCount> result = new ArrayList<>();
         for (Map.Entry<Coach, Integer> entry : coachCountMap.entrySet()) {
             result.add(new CoachTrainingsCount(entry.getKey(), entry.getValue()));

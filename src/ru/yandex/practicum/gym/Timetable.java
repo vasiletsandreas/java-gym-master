@@ -21,7 +21,6 @@ public class Timetable {
         if (!daySchedule.containsKey(time)) {
             daySchedule.put(time, new ArrayList<>());
         }
-
         daySchedule.get(time).add(trainingSession);
     }
 

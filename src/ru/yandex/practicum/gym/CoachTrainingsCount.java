@@ -12,7 +12,6 @@ public class CoachTrainingsCount implements Comparable<CoachTrainingsCount> {
     public Coach getCoach() {
         return coach;
     }
-
     public int getCount() {
         return count;
     }

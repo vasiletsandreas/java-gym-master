@@ -201,7 +201,8 @@ public class TimetableTest {
         timetable.addNewTrainingSession(new TrainingSession(group, coach3,
                 DayOfWeek.FRIDAY, new TimeOfDay(14, 0)));
 
-        List<Timetable.CoachTrainingsCount> result = timetable.getCountByCoaches();
+        // Изменено: используем CoachTrainingsCount вместо Timetable.CoachTrainingsCount
+        List<CoachTrainingsCount> result = timetable.getCountByCoaches();
 
         // Проверить количество тренеров
         Assertions.assertEquals(3, result.size(), "Должно быть 3 тренера");
@@ -237,7 +238,8 @@ public class TimetableTest {
         Assertions.assertTrue(specificSession.isEmpty(),
                 "В пустом расписании не должно быть занятий в конкретное время");
 
-        List<Timetable.CoachTrainingsCount> coachCounts = timetable.getCountByCoaches();
+        // Изменено: используем CoachTrainingsCount вместо Timetable.CoachTrainingsCount
+        List<CoachTrainingsCount> coachCounts = timetable.getCountByCoaches();
         Assertions.assertTrue(coachCounts.isEmpty(),
                 "В пустом расписании не должно быть тренеров");
     }
